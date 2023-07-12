@@ -1,6 +1,7 @@
 package hexlet.code;
 
 public class StringSchema {
+    private static StringSchema stringSchema;
     public String required;
     public int minLength;
     public String contains;
@@ -40,11 +41,15 @@ public class StringSchema {
     }
 
     public void required() {
-         required.isEmpty();
+         stringSchema.required();
     }
 
     public boolean isValid(String s) {
-        return true;
+        if (s.isEmpty()) {
+            return true;
+        }
+        return false;
+
     }
 
     // public StringSchema minLength(int num) {

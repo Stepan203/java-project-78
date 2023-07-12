@@ -11,7 +11,7 @@ public class Validator {
         return stringSchema;
     }
 
-    public boolean isValid() {
-        return true;
-    }
+   // public boolean isValid() {
+   //     return true;
+   // }
 }

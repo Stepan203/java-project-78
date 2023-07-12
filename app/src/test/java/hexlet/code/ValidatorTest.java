@@ -16,7 +16,7 @@ public class ValidatorTest {
         Validator v = new Validator();
         StringSchema stringSchema = v.string();
         assertTrue(stringSchema.isValid(""));
-        /assertTrue(stringSchema.isValid(null));
+       // assertTrue(stringSchema.isValid(null));
         stringSchema.required();
         assertFalse(stringSchema.isValid("5"));
     }

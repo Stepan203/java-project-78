@@ -1,50 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>StringSchema.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">app</a> &gt; <a href="index.source.html" class="el_package">hexlet.code</a> &gt; <span class="el_source">StringSchema.java</span></div><h1>StringSchema.java</h1><pre class="source lang-java linenums">package hexlet.code;
 
 public class StringSchema {
+    private static StringSchema stringSchema;
     public String required;
     public int minLength;
     public String contains;
 
-<span class="fc" id="L8">    public StringSchema() {</span>
+<span class="fc" id="L9">    public StringSchema() {</span>
 
-<span class="fc" id="L10">    }</span>
+<span class="fc" id="L11">    }</span>
 
     public String getRequired() {
-<span class="nc" id="L13">        return required;</span>
+<span class="nc" id="L14">        return required;</span>
     }
 
     public void setRequired(String required) {
-<span class="nc" id="L17">        this.required = required;</span>
-<span class="nc" id="L18">    }</span>
+<span class="nc" id="L18">        this.required = required;</span>
+<span class="nc" id="L19">    }</span>
 
     public int getMinLength() {
-<span class="nc" id="L21">        return minLength;</span>
+<span class="nc" id="L22">        return minLength;</span>
     }
 
     public void setMinLength(int minLength) {
-<span class="nc" id="L25">        this.minLength = minLength;</span>
-<span class="nc" id="L26">    }</span>
+<span class="nc" id="L26">        this.minLength = minLength;</span>
+<span class="nc" id="L27">    }</span>
 
     public String getContains() {
-<span class="nc" id="L29">        return contains;</span>
+<span class="nc" id="L30">        return contains;</span>
     }
 
     public void setContains(String contains) {
-<span class="nc" id="L33">        this.contains = contains;</span>
-<span class="nc" id="L34">    }</span>
+<span class="nc" id="L34">        this.contains = contains;</span>
+<span class="nc" id="L35">    }</span>
 
-<span class="nc" id="L36">    public StringSchema(String required, int minLength, String contains) {</span>
-<span class="nc" id="L37">        this.required = required;</span>
-<span class="nc" id="L38">        this.minLength = minLength;</span>
-<span class="nc" id="L39">        this.contains = contains;</span>
-<span class="nc" id="L40">    }</span>
+<span class="nc" id="L37">    public StringSchema(String required, int minLength, String contains) {</span>
+<span class="nc" id="L38">        this.required = required;</span>
+<span class="nc" id="L39">        this.minLength = minLength;</span>
+<span class="nc" id="L40">        this.contains = contains;</span>
+<span class="nc" id="L41">    }</span>
 
     public void required() {
-<span class="nc" id="L43">         required.isEmpty();</span>
-<span class="nc" id="L44">    }</span>
+<span class="nc" id="L44">         stringSchema.required();</span>
+<span class="nc" id="L45">    }</span>
 
     public boolean isValid(String s) {
-<span class="fc" id="L47">        return true;</span>
+<span class="pc bpc" id="L48" title="1 of 2 branches missed.">        if (s.isEmpty()) {</span>
+<span class="fc" id="L49">            return true;</span>
+        }
+<span class="nc" id="L51">        return false;</span>
+
     }
 
     // public StringSchema minLength(int num) {

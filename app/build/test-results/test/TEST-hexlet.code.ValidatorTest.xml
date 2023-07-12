@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="hexlet.code.ValidatorTest" tests="1" skipped="0" failures="1" errors="0" timestamp="2023-07-09T16:10:21" hostname="DESKTOP-U97L7TB" time="0.072">
+<testsuite name="hexlet.code.ValidatorTest" tests="1" skipped="0" failures="1" errors="0" timestamp="2023-07-12T20:12:55" hostname="DESKTOP-U97L7TB" time="0.085">
   <properties/>
-  <testcase name="generateTest()" classname="hexlet.code.ValidatorTest" time="0.072">
-    <failure message="java.lang.NullPointerException: Cannot invoke &quot;String.isEmpty()&quot; because &quot;this.required&quot; is null" type="java.lang.NullPointerException">java.lang.NullPointerException: Cannot invoke &quot;String.isEmpty()&quot; because &quot;this.required&quot; is null
-	at hexlet.code.StringSchema.required(StringSchema.java:43)
+  <testcase name="generateTest()" classname="hexlet.code.ValidatorTest" time="0.085">
+    <failure message="java.lang.NullPointerException: Cannot invoke &quot;hexlet.code.StringSchema.required()&quot; because &quot;hexlet.code.StringSchema.stringSchema&quot; is null" type="java.lang.NullPointerException">java.lang.NullPointerException: Cannot invoke &quot;hexlet.code.StringSchema.required()&quot; because &quot;hexlet.code.StringSchema.stringSchema&quot; is null
+	at hexlet.code.StringSchema.required(StringSchema.java:44)
 	at hexlet.code.ValidatorTest.generateTest(ValidatorTest.java:20)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
