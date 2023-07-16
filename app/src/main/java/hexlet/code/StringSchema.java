@@ -12,7 +12,7 @@ public class StringSchema {
          return this;
     }
     public boolean isValid(String s) {
-        if (s instanceof String && s.length() == 0) {
+        if (s instanceof String && s.length() == 0 || s == null) {
             return true;
         }
         else {

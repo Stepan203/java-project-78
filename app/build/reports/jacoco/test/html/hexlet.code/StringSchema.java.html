@@ -8,21 +8,17 @@ public class StringSchema {
 <span class="fc" id="L8">        this.required = false;</span>
 <span class="fc" id="L9">    }</span>
     public StringSchema required() {
-<span class="nc" id="L11">         this.required = true;</span>
-<span class="nc" id="L12">         return this;</span>
+<span class="fc" id="L11">         this.required = true;</span>
+<span class="fc" id="L12">         return this;</span>
     }
     public boolean isValid(String s) {
-<span class="pc bpc" id="L15" title="1 of 4 branches missed.">        if (s instanceof String &amp;&amp; s.length() == 0) {</span>
+<span class="fc bfc" id="L15" title="All 6 branches covered.">        if (s instanceof String &amp;&amp; s.length() == 0 || s == null) {</span>
 <span class="fc" id="L16">            return true;</span>
         }
         else {
 <span class="fc" id="L19">            return false;</span>
         }
     }
-
-    // public StringSchema minLength(int num) {
-   //     return minLength();
-   // }
 
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>
