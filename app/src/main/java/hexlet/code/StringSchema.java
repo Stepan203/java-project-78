@@ -1,59 +1,23 @@
 package hexlet.code;
 
 public class StringSchema {
-    private static StringSchema stringSchema;
-    public String required;
-    public int minLength;
-    public String contains;
+    private boolean required;
 
+    //  private static StringSchema stringSchema;
     public StringSchema() {
-
+        this.required = false;
     }
-
-    public String getRequired() {
-        return required;
+    public StringSchema required() {
+         this.required = true;
+         return this;
     }
-
-    public void setRequired(String required) {
-        this.required = required;
-    }
-
-    public int getMinLength() {
-        return minLength;
-    }
-
-    public void setMinLength(int minLength) {
-        this.minLength = minLength;
-    }
-
-    public String getContains() {
-        return contains;
-    }
-
-    public void setContains(String contains) {
-        this.contains = contains;
-    }
-
-    public StringSchema(String required, int minLength, String contains) {
-        this.required = required;
-        this.minLength = minLength;
-        this.contains = contains;
-    }
-
-    public void required() {
-         stringSchema.required();
-    }
-
     public boolean isValid(String s) {
-        if (s.isEmpty()) {
+        if (s instanceof String && s.length() == 0) {
             return true;
         }
-        return false;
-
+        else {
+            return false;
+        }
     }
-
-    // public StringSchema minLength(int num) {
-   //     return minLength();
-   // }
 
 }
