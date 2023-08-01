@@ -2,17 +2,28 @@
 
 import java.util.Scanner;
 import hexlet.code.StringSchema;
+
+import javax.xml.validation.Schema;
+
 public class Validator {
     private final StringSchema stringSchema;
-<span class="fc" id="L7">    public Validator() {</span>
-<span class="fc" id="L8">        stringSchema = new StringSchema();</span>
-<span class="fc" id="L9">    }</span>
+    private NumberSchema numberSchema;
+    private MapSchema mapSchema;
+<span class="fc" id="L12">    public Validator() {</span>
+<span class="fc" id="L13">        stringSchema = new StringSchema();</span>
+<span class="fc" id="L14">        numberSchema = new NumberSchema();</span>
+<span class="fc" id="L15">        mapSchema = new MapSchema();</span>
+
+<span class="fc" id="L17">    }</span>
     public StringSchema string() {
-<span class="fc" id="L11">        return stringSchema;</span>
+<span class="nc" id="L19">        return stringSchema;</span>
+    }
+    public NumberSchema number() {
+<span class="nc" id="L22">        return numberSchema;</span>
+    }
+    public MapSchema map() {
+<span class="fc" id="L25">        return mapSchema;</span>
     }
 
-   // public boolean isValid() {
-   //     return true;
-   // }
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

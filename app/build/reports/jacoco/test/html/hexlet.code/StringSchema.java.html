@@ -1,24 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>StringSchema.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">app</a> &gt; <a href="index.source.html" class="el_package">hexlet.code</a> &gt; <span class="el_source">StringSchema.java</span></div><h1>StringSchema.java</h1><pre class="source lang-java linenums">package hexlet.code;
 
+import static java.util.Objects.isNull;
+
 public class StringSchema {
+    private boolean contains;
+    private boolean minLength;
     private boolean required;
+    private int num;
+    private String word;
 
     //  private static StringSchema stringSchema;
-<span class="fc" id="L7">    public StringSchema() {</span>
-<span class="fc" id="L8">        this.required = false;</span>
-<span class="fc" id="L9">    }</span>
+<span class="fc" id="L13">    public StringSchema() {</span>
+<span class="fc" id="L14">        this.required = false;</span>
+<span class="fc" id="L15">        this.contains = false;</span>
+<span class="fc" id="L16">        this.minLength = false;</span>
+<span class="fc" id="L17">    }</span>
+    // public StringSchema() {
+     //   addCheck(
+     //           &quot;required&quot;,
+     //           value -&gt; value instanceof String &amp;&amp; !((String) value).isEmpty()
+     //   );
+   // }
     public StringSchema required() {
-<span class="fc" id="L11">         this.required = true;</span>
-<span class="fc" id="L12">         return this;</span>
+<span class="nc" id="L25">         this.required = true;</span>
+<span class="nc" id="L26">         return this;</span>
     }
-    public boolean isValid(String s) {
-<span class="fc bfc" id="L15" title="All 6 branches covered.">        if (s instanceof String &amp;&amp; s.length() == 0 || s == null) {</span>
-<span class="fc" id="L16">            return true;</span>
-        }
-        else {
-<span class="fc" id="L19">            return false;</span>
-        }
+    public StringSchema minLength(int num) {
+        // this.minLength() = true;
+<span class="nc" id="L30">        return this;</span>
+       // return minLength(num);
     }
 
+    public StringSchema contains(String word) {
+<span class="nc" id="L35">        return this;</span>
+    }
+    public boolean isValid(String s) {
+<span class="nc bnc" id="L38" title="All 6 branches missed.">        if (s instanceof String &amp;&amp; s.length() &gt;= 0 &amp;&amp; required) {</span>
+<span class="nc" id="L39">            return false;</span>
+        }
+<span class="nc bnc" id="L41" title="All 2 branches missed.">        if (s.length() &lt; num) {</span>
+<span class="nc" id="L42">            return false;</span>
+        }
+<span class="nc bnc" id="L44" title="All 4 branches missed.">        if (s instanceof String || s.contains(word)) {</span>
+<span class="nc" id="L45">            return true;</span>
+        }
+        else {
+<span class="nc" id="L48">            return false;</span>
+        }
+    }
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>
